@@ -12,7 +12,7 @@
         <nav>
             <ul>
                 @foreach($menu as $item)
-                <li><a href="">{{ $item }}</a></li>
+                <li><a href="http://127.0.0.1:8000/{{$item}}">{{ $item }}</a></li>
                 @endforeach
             </ul>
         </nav>

@@ -22,8 +22,17 @@ Route::get('/', function () {
     return view('home', $data);
 })->name('home');
 
+Route::get('/Home', function () {
+    $data = [
+        'user' => 'Giovanni Giorgio',
+        'message' => 'Ciao amico!',
+        'menu' => ['Home', 'About', 'Contacts']
+    ];
+    return view('home', $data);
+})->name('home');
 
-Route::get('/about', function () {
+
+Route::get('/About', function () {
     $data = [
         'menu' => ['Home', 'About', 'Contacts']
     ];
@@ -31,7 +40,7 @@ Route::get('/about', function () {
 })->name('about');
 
 
-Route::get('/contatti', function () {
+Route::get('/Contacts', function () {
     $data = [
         'menu' => ['Home', 'About', 'Contacts'],
         'contatti' => ['email@libero.it', 05555552, 'via santi santissimi']
